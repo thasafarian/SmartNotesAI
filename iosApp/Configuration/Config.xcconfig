@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=MyNotesCareTaker
+PRODUCT_BUNDLE_IDENTIFIER=org.thasafarian.mynotescaretaker.MyNotesCareTaker$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
