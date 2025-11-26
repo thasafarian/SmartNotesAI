@@ -31,11 +31,9 @@ import kotlin.time.Instant
 class TaskRepository(
     private val client: HttpClient = createHttpClient()
 ) {
-    private val baseUrl = "https://6902f0f3d0f10a340b21f140.mockapi.io/api/v1/todo"
-    private val geminiUrl =
-        "https://generativelanguage.googleapis.com/v1beta/models/" + "gemini-2.5-flash-lite:generateContent"
-
-    private val apiKey = "AIzaSyAbKxL7rxqUKtcKilj48ryQ0zAhExMKBYE"
+    private val baseUrl = Config.baseUrl
+    private val geminiUrl = "${Config.geminiBaseUrl}/${Config.geminiModel}"
+    private val apiKey = Config.geminiApiKey
 
     suspend fun fetchTasks(): List<Task> {
         return client.get(baseUrl).body()
